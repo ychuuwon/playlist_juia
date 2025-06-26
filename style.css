@@ -1,0 +1,32 @@
+body {
+  font-family: Arial;
+  padding: 60;
+  max-width: 600px;
+  margin: auto;
+  background: #c59494;
+}
+input, button {
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  background: #412727;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.remove-btn {
+  background: rgb(189, 64, 64);
+  color: rgb(255, 146, 146);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
