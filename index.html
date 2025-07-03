@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="style.sheet" href="style.css">
-    <title>Playlist da Juia</title>
+  <meta charset="UTF-8">
+  <title>Minha Playlist</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Seu CSS personalizado -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>🎵 Minha Playlist</h2>
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Minha Playlist</h2>
 
-  <input type="text" id="nomeMusica" placeholder="Nome da música">
-  <input type="text" id="nomeArtista" placeholder="Nome do artista">
-  <button onclick="adicionarMusica()">Adicionar Música</button>
+    <div class="row g-3 mb-3">
+      <div class="col-md-5">
+        <input type="text" id="nomeMusica" class="form-control" placeholder="Nome da música">
+      </div>
+      <div class="col-md-5">
+        <input type="text" id="nomeArtista" class="form-control" placeholder="Nome do artista">
+      </div>
+      <div class="col-md-2">
+        <button id="btnAdicionar" class="btn btn-primary w-100">Adicionar</button>
+      </div>
+    </div>
 
-  <ul id="listaMusicas"></ul>
+    <ul id="listaMusicas" class="list-group"></ul>
+  </div>
 
+  <!-- Script da aplicação -->
   <script src="script.js"></script>
-</body>
-</html>
 </body>
 </html>

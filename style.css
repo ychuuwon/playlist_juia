@@ -1,32 +1,73 @@
+/* === Paleta roxa suave com branco e transições === */
+
+/* Cor de fundo da página */
 body {
-  font-family: Arial;
-  padding: 60;
-  max-width: 600px;
-  margin: auto;
-  background: #c59494;
+  background-color: #f5f0fa;
+  transition: background-color 0.4s ease; /* transição suave no fundo */
 }
-input, button {
-  padding: 10px;
-  margin: 5px 0;
-  width: 100%;
+
+/* Estilo do container principal */
+.container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(122, 61, 184, 0.1);
+  transition: box-shadow 0.3s ease;
 }
-ul {
-  list-style: none;
-  padding: 0;
+
+/* Cor de fundo da lista de músicas */
+#listaMusicas {
+  background-color: #eee6f7;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
 }
-li {
-  background: #412727;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-}
-.remove-btn {
-  background: rgb(189, 64, 64);
-  color: rgb(255, 146, 146);
+
+/* Estilo dos itens da lista */
+#listaMusicas li {
+  margin-bottom: 8px;
+  background-color: #f3eaff;
   border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 4px;
+  color: #4b3269;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+/* Efeito ao passar o mouse nos itens da lista */
+#listaMusicas li:hover {
+  background-color: #e4d6f1;
+  transform: scale(1.02); /* leve zoom no item */
+}
+
+/* Botões */
+button.btn {
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botão "Adicionar" */
+.btn-primary {
+  background-color: #7a3db8;
+  border-color: #7a3db8;
+}
+
+.btn-primary:hover {
+  background-color: #692ea3;
+  border-color: #5e2793;
+  transform: scale(1.05);
+}
+
+/* Botão "Remover" */
+.btn-danger {
+  background-color: #b3478c;
+  border-color: #b3478c;
+}
+
+.btn-danger:hover {
+  background-color: #9e3e7a;
+  border-color: #8c346a;
+  transform: scale(1.05);
+}
+
+
