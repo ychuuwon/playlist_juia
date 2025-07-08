@@ -1,44 +1,42 @@
-/* === Paleta roxa suave com branco e transições === */
+/* === MODO CLARO (amarelo pastel) === */
 
-/* Cor de fundo da página */
 body {
-  background-color: #f5f0fa;
-  transition: background-color 0.4s ease; /* transição suave no fundo */
+  background-color: #fffbea;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  color: #333333;
 }
 
-/* Estilo do container principal */
 .container {
-  background-color: #ffffff;
+  background-color: #fffdf3;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(122, 61, 184, 0.1);
+  box-shadow: 0 0 10px rgba(255, 230, 130, 0.2);
   transition: box-shadow 0.3s ease;
 }
 
-/* Cor de fundo da lista de músicas */
-#listaMusicas {
-  background-color: #eee6f7;
+#listaMusicas,
+#listaFilmes {
+  background-color: #fff5cc;
   border-radius: 0.5rem;
   padding: 0.5rem;
   transition: background-color 0.3s ease;
 }
 
-/* Estilo dos itens da lista */
-#listaMusicas li {
+#listaMusicas li,
+#listaFilmes li {
   margin-bottom: 8px;
-  background-color: #f3eaff;
+  background-color: #fff0b3;
   border: none;
-  color: #4b3269;
+  color: #664d00;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Efeito ao passar o mouse nos itens da lista */
-#listaMusicas li:hover {
-  background-color: #e4d6f1;
-  transform: scale(1.02); /* leve zoom no item */
+#listaMusicas li:hover,
+#listaFilmes li:hover {
+  background-color: #ffe680;
+  transform: scale(1.02);
 }
 
-/* Botões */
 button.btn {
   border-radius: 0.5rem;
   font-weight: 500;
@@ -46,28 +44,75 @@ button.btn {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Botão "Adicionar" */
 .btn-primary {
-  background-color: #7a3db8;
-  border-color: #7a3db8;
+  background-color: #f7c948;
+  border-color: #f7c948;
 }
 
 .btn-primary:hover {
-  background-color: #692ea3;
-  border-color: #5e2793;
+  background-color: #f0b429;
+  border-color: #e09b13;
   transform: scale(1.05);
 }
 
-/* Botão "Remover" */
 .btn-danger {
-  background-color: #b3478c;
-  border-color: #b3478c;
+  background-color: #e88e50;
+  border-color: #e88e50;
 }
 
 .btn-danger:hover {
-  background-color: #9e3e7a;
-  border-color: #8c346a;
+  background-color: #d97435;
+  border-color: #c6642a;
   transform: scale(1.05);
 }
 
+/* === MODO ESCURO (tons de roxo) === */
+
+body.escuro {
+  background-color: #1a1126;
+  color: #eee;
+}
+
+body.escuro .container {
+  background-color: #2c1e3c;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+body.escuro #listaMusicas,
+body.escuro #listaFilmes {
+  background-color: #3e2f50;
+}
+
+body.escuro #listaMusicas li,
+body.escuro #listaFilmes li {
+  background-color: #523a69;
+  color: #eee;
+}
+
+body.escuro #listaMusicas li:hover,
+body.escuro #listaFilmes li:hover {
+  background-color: #62457d;
+}
+
+body.escuro .btn-primary {
+  background-color: #8b5fd0;
+  border-color: #8b5fd0;
+}
+
+body.escuro .btn-primary:hover {
+  background-color: #7a4fc0;
+}
+
+body.escuro .btn-danger {
+  background-color: #c0609e;
+}
+
+body.escuro .btn-danger:hover {
+  background-color: #a44e84;
+}
+
+body.escuro .btn-outline-secondary {
+  color: #ddd;
+  border-color: #aaa;
+}
 
