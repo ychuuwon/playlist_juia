@@ -23,7 +23,26 @@ function renderizarPlaylist() {
 function adicionarMusica() {
   const nome = document.getElementById("nomeMusica").value.trim();
   const artista = document.getElementById("nomeArtista").value.trim();
+}
 
+let totalCliques = parseInt(localStorage.getItem('totalCliques')) || 0;
+const contador = document.getElementById('contador');
+contador.textContent = totalCliques;
+
+document.getElementById('btnClique').addEventListener('click', () => {
+  totalCliques++;
+  contador.textContent = totalCliques;
+  localStorage.setItem('totalCliques; totalCliques');
+});
+
+
+document.getElementById('btnMenos').addEventListener('click', funcdimin);
+function funcdimin () {
+  totalCliques--;
+  contador.textContent=totalCliques;
+  localStorage.setItem('totalCliques', totalCliques);
+}
+rora
   if (!nome || !artista) {
     alert("Preencha todos os campos.");
     return;
@@ -35,7 +54,6 @@ function adicionarMusica() {
 
   document.getElementById("nomeMusica").value = "";
   document.getElementById("nomeArtista").value = "";
-}
 
 function removerMusica(index) {
   playlist.splice(index, 1);
@@ -43,9 +61,9 @@ function removerMusica(index) {
   renderizarPlaylist();
 }
 
+
 document.getElementById("btnAdicionarMusica").addEventListener("click", adicionarMusica);
 renderizarPlaylist();
-
 
 // ======================= FILMES =======================
 let filmes = JSON.parse(localStorage.getItem("filmes")) || [];
